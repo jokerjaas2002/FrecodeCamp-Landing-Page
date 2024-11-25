@@ -1,98 +1,198 @@
-css
-
-Verify
-
-Open In Editor
-Edit
-Copy code
+:root {
+    --white: hsl(0, 0%, 100%);
+    --text: hsl(228, 12%, 48%);
+    --pale: hsl(32, 37%, 92%);
+    --green: hsl(160, 8%, 15%);
+    --header-text: hsl(212, 21%, 14%);
+}
+  
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
+  
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--pale);
 }
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+  
+#header-img {
+    width: 60px;
+    object-fit: contain;
 }
-
+  
 #nav-bar {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nav-link {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-
-.nav-link:hover {
-    background-color: #575757;
-}
-
-#header-img {
-    width: 100px;
-    margin: 10px auto;
-}
-
-main {
-    margin-top: 60px; /* Espacio para el encabezado fijo */
-    padding: 20px;
-}
-
-section {
-    padding: 60px 20px;
-    background-color: white;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-p {
-    color: #666;
-    line-height: 1.6;
-}
-
-input[type="email"] {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--white);
     padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
-
-input[type="submit"] {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+  
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+  
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0 10px;
+}
+  
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+  
+.the-product {
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-family: "montserrat";
+}
+  
+#email-section {
+    margin-top: 100px;
+}
+  
+input {
+    padding: 8px;
     border-radius: 5px;
+    border: 1px solid var(--green);
+}
+  
+#submit {
+    background-color: var(--green);
+    color: var(--white);
     cursor: pointer;
 }
-
-input[type="submit"]:hover {
-    background-color: #218838;
+  
+section::before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+    pointer-events: none;
 }
-
-footer {
+  
+section {
+    margin: 40px 20px;
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
+  
+h2 {
+    font-family: "fraunces";
+    margin-bottom: 10px;
+}
+  
+.icon {
+    color: var(--green);
+    margin-right: 30px;
+}
+  
+#features {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+  
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-family: "montserrat";
+}
+  
+#video {
+    width: 100%;
+}
+  
+.product-image {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    border: 1px solid var(--text);
+    border-radius: 10px 10px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.product1 {
+    background-image: url("https://www.example.com/path/to/your/html_css_book_image.jpg");
+}
+.product2 {
+    background-image: url("https://www.example.com/path/to/your/javascript_book_image.jpg");
+}
+.product3 {
+    background-image: url("https://www.example.com/path/to/your/react_book_image.jpg");
+}
+  
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+  
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+}
+  
+.content {
+    font-family: "montserrat";
+    color: var(--text);
+    margin-bottom: 10px;
+}
+  
+.flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.main-price {
+    margin-right: 20px;
+    font-size: 30px;
+    font-family: "fraunces";
+    color: var(--green);
+}
+  
+.old-price {
+    text-decoration: line-through;
+    color: var(--text);
+}
+  
+.author {
+    font-family: "montserrat";
+    letter-spacing: 5px;
+    color: var(--text);
+    text-transform: uppercase;
+}
+  
+.header {
+    font-family: "fraunces";
+    margin: 10px 0;
+    color: var(--header-text);
+}
+  
+.add {
+    background-color: var(--green);
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    color: var(--white);
+    font-family: "montserrat";
+    font-weight: 700;
+    margin
