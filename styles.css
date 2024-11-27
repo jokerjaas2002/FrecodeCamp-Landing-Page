@@ -64,6 +64,7 @@ ul {
 .logo-container {
     display: flex;
     align-items: center;
+    margin-left: 1em;
 }
 
 
@@ -73,9 +74,8 @@ ul {
         align-items: center; 
         width: 100%; 
     }
-
     .container-ul {
-        margin-right: 0; 
+        margin-right: 1.5em; 
     }
 
 }
